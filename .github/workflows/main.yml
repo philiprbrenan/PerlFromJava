@@ -1,4 +1,4 @@
-# Test 2024-04-27 at 02:23:15
+# Test 2024-04-27 at 02:24:47
 
 name: Test
 
@@ -22,6 +22,9 @@ jobs:
       run:  sudo cpan install -T Data::Dump Data::Table::Text
 
     - name: Java
-      run:
+      run: |
         java PerlFromJava.java
+
+    - name: Should print the time followed by aaaa
+      run: |
         cat PerlFromJava.txt
